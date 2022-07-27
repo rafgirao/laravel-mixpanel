@@ -122,7 +122,7 @@ class RecordStripeEvent extends FormRequest
                             'FromPlan' => $oldPlanName,
                             'ToPlan' => $planName,
                         ],
-                        'Churn! :-(' => [],
+                        'Cancel Subscription' => [],
                     ];
                 }
 
@@ -136,7 +136,7 @@ class RecordStripeEvent extends FormRequest
                             'FromPlan' => $oldPlanName,
                             'ToPlan' => $planName,
                         ],
-                        'Unchurn! :-)' => [],
+                        'Update Subscription' => [],
                     ];
                 }
             } else {
@@ -150,7 +150,7 @@ class RecordStripeEvent extends FormRequest
                             'FromPlan' => 'Trial',
                             'ToPlan' => $planName,
                         ],
-                        'Unchurn! :-)' => [],
+                        'Update Subscription' => [],
                     ];
                 }
             }
@@ -160,7 +160,7 @@ class RecordStripeEvent extends FormRequest
                     'Subscription' => $planName,
                 ];
                 $trackingData = [
-                    'Subscription' => ['Status' => 'Created'],
+                    'Create Subscription' => ['Status' => 'Created'],
                 ];
             }
 
@@ -169,7 +169,7 @@ class RecordStripeEvent extends FormRequest
                     'Subscription' => 'Trial',
                 ];
                 $trackingData = [
-                    'Subscription' => ['Status' => 'Trial'],
+                    'Create Subscription' => ['Status' => 'Trial'],
                 ];
             }
         }
