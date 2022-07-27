@@ -8,7 +8,7 @@ class Login
     public function handle(LoginEvent $login)
     {
         if (config("services.mixpanel.enable-default-tracking")) {
-            event(new Mixpanel($login->user, ['User Logged In' => []]));
+            event(new Mixpanel($login->user, ['Login' => []]));
         }
     }
 }

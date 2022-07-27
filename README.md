@@ -111,10 +111,10 @@ $mixPanel = Mixpanel::getFacadeRoot(); // using facade
 ```
 
 After that you can make the usual calls to the MixPanel API:
-- `$mixPanel->identify($user->id);`
+- `$mixPanel->identify($user->email);`
 - `$mixPanel->track('User just paid!');`
-- `$mixPanel->people->trackCharge($user->id, '9.99');`
-- `$mixPanel->people->set($user->id, [$data]);`
+- `$mixPanel->people->trackCharge($user->email, '9.99');`
+- `$mixPanel->people->set($user->email, [$data]);`
 
   And so on ...
 

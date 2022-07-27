@@ -38,7 +38,7 @@ class RecordStripeEvent extends FormRequest
             return;
         }
 
-        app('mixpanel')->identify($user->id);
+        app('mixpanel')->identify($user->email);
 
         if ($transaction['object'] === 'charge' && ! count($originalValues)) {
             $this->recordCharge($transaction, $user);

@@ -123,7 +123,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 - improper tracking of user details, which caused users' names to be blank and a `0 Object [object]` field to be tracked
   erroneously.
-- fixed tracking to not depend on `$user->id` when referencing the primary key, but pulling it dynamically instead.
+- fixed tracking to not depend on `$user->email` when referencing the primary key, but pulling it dynamically instead.
 
 ## [0.4.6] - 25 Sep 2015
 ### Fixed
